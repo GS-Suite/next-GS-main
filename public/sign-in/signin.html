@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>GS-Suite Sign-In</title>
+    <script>
+     
+      /*
+      var data = {
+        'username': 'testing',
+        'password': 'Testing@1235'
+      };
+      var options = {
+        'method' : 'post',
+        'contentType': 'application/json',
+        // Convert the JavaScript object to a JSON string.
+        'payload' : JSON.stringify(data)
+      };
+       UrlFetchApp.fetch('https://gs-suite-dev.herokuapp.com/sign-in/', options);
+        */
+      
+      let c = fetch(
+        'https://gs-suite-dev.herokuapp.com/sign_in/',
+        {
+          mode: 'cors',
+          method: 'POST',
+          body: JSON.stringify({
+            username: 'testing',
+            password: 'Test@1235'
+          }),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8"
+          }
+        }
+      ).then(response => response.json())
+        .then(json => {
+          window.localStorage.setItem('token', json['token']);
+          window.localStorage.getItem('token');
+        });
+        /* token= c['token'];
+        window.localStorage.setItem('token', token); 
+        console.log(window.localStorage.getItem('token'));*/
+
+
+       /* var myData= JSON.stringify(c);
+        localStorage.setItem("testData", myData);
+
+        text=localStorage.getItem('testData');
+        obj= JSON.parse(text);
+        console.log(obj);*/
+
+
+         //var accessTokenObj = JSON.parse(localStorage.getItem("token:"));console.log(accessTokenObj); 
+
+        //console.log(window.localStorage.setItem("token",""));
+      
+
+      /*const myForm = document.getElementById('myForm');
+
+      myForm.addEventListener('submit', function(e){
+        e.preventDefault();
+
+        const formData = new FormData(this);
+
+        fetch('https://gs-suite-dev.herokuapp.com/sign-in/', {
+          method: 'POST',
+          body:{
+            username: 'testing',
+            password: 'Testing@1235'
+          }
+        }).then(response => {
+          console.log(response);
+          return response.json();})
+      .then(json => {console.log(json)}); */
+    
+      
+      /*console.log('about to fetch ');
+      fetch('gs-suite logo.jpg').then(response =>{
+        console.log(response);
+        return response.blob();
+      }) .then(response => { console.log(response);});*/
+    </script>
+
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body{
+        background-color: #5fcf80;
+      }
+      .row{
+        background-color: #fff;
+        border-radius: 30px;
+      }
+      img{
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+      }
+      .btn1{
+        border: none;
+        outline: none;
+        height: 50px;
+        width: 100%;
+        background-color: black;
+        color: white;
+        border-radius: 4px;
+        font-weight: bold;
+      }
+      .btn1:hover{
+        background-color: white;
+        border: 1px solid;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="Form my-4 mx-5">
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-lg-5">
+            <img src="assets/images/gs-suite logo.jpg" class="img-fluid" alt="GS-Suite">
+          </div>
+          <div class="col-lg-7 px-5 pt-5">
+            <h1 class="font-weight-bold py-3">Welcome to GS-Suite</h1>
+            <h4>Sign In</h4>
+            <form action="/" class="needs-validation" novalidate method="POST"  >
+              <div class="form-row">
+                <div class="col-lg-7">
+                  <input type="text" id="username" value="testing" placeholder="Username" class="form-control my-3 p-4" required="?">
+                  </div>
+              </div>
+              <div class="form-row">
+                <div class="col-lg-7">
+                  <input type="password" id="password" value="Test@1235" placeholder="******" class="form-control my-3 p-4" required="">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-lg-7">
+                  <button type="submit" value="submit" class="btn1 mt-3 mb-5" >Sign In</button>
+                </div>
+              </div>
+              <a href="#" >Forgot password?</a>
+              <p>Don't have an account? <a href="/sign-up">Sign up now!</a></p>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
