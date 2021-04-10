@@ -25,6 +25,18 @@ app.get("/ask", function(req,res){
     res.sendFile(__dirname+"/public/ask.html")
 });
 
+app.get("/student-dashboard", function(req,res){
+    res.sendFile(__dirname+"/public/student-dashboard/dashboard.html")
+});
+
+app.get("/student-dashboard/user", function(req,res){
+    res.sendFile(__dirname+"/public/student-dashboard/user.html")
+});
+
+app.get("/student-dashboard/attendance", function(req,res){
+    res.sendFile(__dirname+"/public/student-dashboard/attendance.html")
+});
+
 // app.get("/about", function(req,res){
 //     res.sendFile(__dirname+"/public/about.html")
 // });
