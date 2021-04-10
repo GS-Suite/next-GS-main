@@ -48,6 +48,6 @@ app.post('/ask', function(req,res){
     console.log(req.body);    
 });
 
-app.listen(3000, function(){
+app.listen(process.env.port || 3000, function(){
     console.log('Server started at port 3000');
 });
