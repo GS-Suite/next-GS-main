@@ -15,11 +15,11 @@
           mode: 'cors',
           method: 'POST',
           body: JSON.stringify({
-            username: 'Westing',
-            password: 'wello@1235',
-            email: 'welcome@gmail.com',
-            first_name: 'hellloo',
-            last_name: 'hellloo'
+            username: document.getElementById("username"),
+            password: document.getElementById("password"),
+            email: document.getElementById("email"),
+            first_name: document.getElementById("firstname"),
+            last_name: document.getElementById("lastname")
           }),
           headers: {
             "Content-type": "application/json; charset=UTF-8"
@@ -28,7 +28,8 @@
       ).then(response => response.json())
         .then(json => console.log(json));
 </script>
-<!-- <script>
+
+<script>
   function signup()
   {
     var fname = document.getElementById("firstname").value;
@@ -59,7 +60,7 @@
 		}
 		else if(pwd.length < 8)
 		{
-			alert("Password min and max length is 8.");
+			alert("Password min length is 8.");
 		}
 		else
 		{
@@ -67,7 +68,7 @@
        
 		}
 	}
-</script> -->
+</script>
 
     <style>
       *{
@@ -108,36 +109,36 @@
       <div class="container">
         <div class="row no-gutters">
           <div class="col-lg-5">
-            <img src="assets/images/gs-suite logo1.jpg" class="img-fluid" alt="GS-Suite">
+            <img src="/assets/images/gs-suite logo1.jpg" class="img-fluid" alt="GS-Suite">
           </div>
           <div class="col-lg-7 px-5 pt-5">
             <h1 class="font-weight-bold py-3">Welcome to GS-Suite</h1>
             <h4>Sign Up</h4>
-            <form action="/sign-up" class="needs-validation" novalidate method="POST" >
+            <form action="/sign-up" class="needs-validation" method="POST" >
                 <div class="form-row">
                     <div class="col-lg-7">
-                        <input type="text" id="firstname" placeholder="First name" class="form-control my-3 p-4">
-                        <input type="text" id="lastname" placeholder="Last name" class="form-control my-3 p-4">                 
+                        <input type="text" id="firstname" placeholder="First name" class="form-control my-3 p-4" required>
+                        <input type="text" id="lastname" placeholder="Last name" class="form-control my-3 p-4" required>                 
                     </div>
                   </div>
               <div class="form-row">
                 <div class="col-lg-7">
-                  <input type="text" id="username" placeholder="Username" class="form-control my-3 p-4">
+                  <input type="text" id="username" placeholder="Username" class="form-control my-3 p-4" required>
                 </div>
               </div>
               <div class="form-row">
                 <div class="col-lg-7">
-                  <input type="password" id="password" placeholder="******" class="form-control my-3 p-4">
+                  <input type="password" id="password" placeholder="******" class="form-control my-3 p-4" required>
                 </div>
               </div>
               <div class="form-row">
                 <div class="col-lg-7">
-                  <input type="email" id="email" placeholder="abcd@email.com" class="form-control my-3 p-4">
+                  <input type="email" id="email" placeholder="abcd@email.com" class="form-control my-3 p-4" required>
                 </div>
               </div>
               <div class="form-row">
                 <div class="col-lg-7">
-                 <a href="/ask"> <button type="button" class="btn1 mt-3 mb-5" >Sign Up</button></a>
+                  <button type="submit" class="btn1 mt-3 mb-5" onclick="signup()">Sign Up</button>
                 </div>
               </div>
               <p>Already a user? <a href="/" >Sign in!</a></p>

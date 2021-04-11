@@ -49,11 +49,12 @@ app.get("/student-dashboard/attendance", function(req,res){
 
 
 app.post('/', function(req,res){
-    console.log(req.body);    
+    res.sendFile(__dirname+"/public/ask.html")
+       
 });
 
 app.post('/sign-up', function(req,res){   
-    console.log(req.body);
+    res.sendFile(__dirname+"/public/ask.html")
 });
 
 app.post('/ask', function(req,res){
