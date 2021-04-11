@@ -94,6 +94,7 @@
 	{
 		var uname = document.getElementById("username").value;
 		var pwd = document.getElementById("password").value;
+    var btn = document.getElementById("btnsubmit");
 		if(uname =='')
 		{
 			alert("Please enter user name.");
@@ -105,6 +106,12 @@
 		else if(pwd.length < 8 )
 		{
 			alert("Password min length is 8.");
+      btn.addEventListener('submit', function(e){
+        if (pwd.length < 8){
+          e.preventDefault();
+        }
+        
+      });
 		}
 		else
 		{
@@ -173,7 +180,7 @@
               </div>
               <div class="form-row">
                 <div class="col-lg-7">
-               <button type="submit" value="submit" class="btn1 mt-3 mb-5" onclick="login()" >Sign In</button>
+               <button type="submit" value="submit" id="btnsubmit" class="btn1 mt-3 mb-5" onclick="login()" >Sign In</button>
                 </div>
               </div>
               <a href="#" >Forgot password?</a>

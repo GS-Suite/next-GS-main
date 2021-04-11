@@ -37,6 +37,19 @@ app.get("/student-dashboard/attendance", function(req,res){
     res.sendFile(__dirname+"/public/student-dashboard/attendance.html")
 });
 
+app.get("/teacher-dashboard", function(req,res){
+    res.sendFile(__dirname+"/public/teacher-dashboard/dashboard.html")
+});
+
+app.get("/teacher-dashboard/user", function(req,res){
+    res.sendFile(__dirname+"/public/teacher-dashboard/user.html")
+});
+
+app.get("/teacher-dashboard/attendance", function(req,res){
+    res.sendFile(__dirname+"/public/teacher-dashboard/attendance.html")
+});
+
+
 // app.get("/about", function(req,res){
 //     res.sendFile(__dirname+"/public/about.html")
 // });
