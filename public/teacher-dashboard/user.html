@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="../assets/images/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    User Profile
+    Teacher Profile
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -18,6 +18,7 @@
   <link href="../assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project
   <link href="../assets/demo/demo.css" rel="stylesheet" /> -->
+
   <script>
     function signout()
     {
@@ -25,33 +26,32 @@
       alert("Do you really want to sign out?");
     }
   </script>
-
 </head>
 
 <body class="">
   <div class="wrapper ">
     <div class="sidebar" data-color="orange">
       <div class="logo">
-        <a href="/student-dashboard" class="simple-text logo-normal">
+        <a href="dashboard.html" class="simple-text logo-normal">
           GS-Suite
         </a>
       </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
           <li>
-            <a href="/student-dashboard">
+            <a href="/teacher-dashboard">
               <i class="now-ui-icons design_app"></i>
               <p>Dashboard</p>
             </a>
           </li>
           <li class="active">
-            <a href="/student-dashboard/user">
+            <a href="/teacher-dashboard/user">
               <i class="now-ui-icons users_single-02"></i>
-              <p>User Profile</p>
+              <p>Teacher Profile</p>
             </a>
           </li>
           <li>
-            <a href="/student-dashboard/attendance">
+            <a href="/teacher-dashboard/attendance">
               <i class="now-ui-icons ui-2_time-alarm"></i>
               <p>Attendance</p>
             </a>
@@ -71,7 +71,7 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="/student-dashboard/user">User Profile</a>
+            <a class="navbar-brand" href="/teacher-dashboard/user">Teacher Profile</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -91,7 +91,7 @@
             </form>
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="/student-dashboard/attendance">
+                <a class="nav-link" href="/teacher-dashboard/attendance">
                   <i class="now-ui-icons ui-2_time-alarm"></i>
                   <p>
                     <span class="d-lg-none d-md-block">Stats</span>
@@ -111,7 +111,7 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/student-dashboard/user">
+                <a class="nav-link" href="/teacher-dashboard/user">
                   <i class="now-ui-icons users_single-02"></i>
                   <p>
                     <span class="d-lg-none d-md-block">Account</span>
@@ -135,19 +135,13 @@
               <div class="card-body">
                 <form>
                   <div class="row">
-                    <div class="col-md-2 pr-1">
+                    <div class="col-md-4 pr-1">
                       <div class="form-group">
                         <label>Class</label>
                         <input type="text" class="form-control" placeholder="Class" value="">
                       </div>
                     </div>
-                    <div class="col-md-2 pr-1">
-                      <div class="form-group">
-                        <label>Roll No</label>
-                        <input type="text" class="form-control" placeholder="Roll No" value="">
-                      </div>
-                    </div>
-                    <div class="col-md-3 px-1">
+                    <div class="col-md-4 px-1">
                       <div class="form-group">
                         <label>Username</label>
                         <input type="text" class="form-control" placeholder="Username" value="">
@@ -164,7 +158,7 @@
                     <div class="col-md-6 pr-1">
                       <div class="form-group">
                         <label>First Name</label>
-                        <input type="text" class="form-control" placeholder="Company" value="">
+                        <input type="text" class="form-control" placeholder="first Name" value="">
                       </div>
                     </div>
                     <div class="col-md-6 pl-1">
@@ -215,10 +209,10 @@
                       <a href="#">Update Profile</a>
                     </div>
                     <div class="col-md-4">
-                      <a href="#">Update Password</a>
+                      <a href="">Update Password</a>
                     </div>
                     <div class="col-md-4">
-                      <a href="#">Delete Account</a>
+                      <a href="">Delete Account</a>
                     </div>
                   </div>  
                 </form>
@@ -237,7 +231,7 @@
                     <h5 class="title">Gs-Suite</h5>
                   </a>
                   <p class="description">
-                    GS-Suite
+                   GS-Suite
                   </p>
                 </div>
                 <p class="description text-center">
@@ -254,7 +248,7 @@
           <nav>
             <ul>
               <li>
-                <a href="/student-dashboard">
+                <a href="/teacher-dashboard">
                   GS-Suite
                 </a>
               </li>
@@ -263,7 +257,7 @@
           <div class="copyright" id="copyright">
             &copy; <script>
               document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-            </script> Designed by <a href="/student-dashboard" target="_blank">Gs-Suite</a>. Coded by <a href="/student-dashboard" target="_blank">Gs-Suite</a>.
+            </script> Designed by <a href="/teacher-dashboard" target="_blank">Gs-Suite</a>. Coded by <a href="/teacher-dashboard" target="_blank">Gs-Suite</a>.
           </div>
         </div>
       </footer>
@@ -280,10 +274,9 @@
   <script src="../assets/js/plugins/chartjs.min.js"></script>
   <!--  Notifications Plugin    -->
   <script src="../assets/js/plugins/bootstrap-notify.js"></script>
-  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc
+  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
-  <script src="../assets/demo/demo.js"></script> -->
-  
+  <script src="../assets/demo/demo.js"></script>
 </body>
 
 </html>
